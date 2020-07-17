@@ -44,7 +44,7 @@ public class User extends Auditable
     @Email
     private String primaryemail;
 
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnoreProperties(value = "users")
     private List<Todos> todos = new ArrayList<>();
     /**
