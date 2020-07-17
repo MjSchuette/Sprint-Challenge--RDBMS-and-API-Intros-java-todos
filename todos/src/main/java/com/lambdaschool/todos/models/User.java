@@ -45,7 +45,7 @@ public class User extends Auditable
     private String primaryemail;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonIgnoreProperties(value = "users")
+    @JsonIgnoreProperties(value = "user", allowSetters = true)
     private List<Todos> todos = new ArrayList<>();
     /**
      * Default constructor used primarily by the JPA.

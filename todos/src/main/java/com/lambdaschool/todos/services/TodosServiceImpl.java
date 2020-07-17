@@ -1,6 +1,6 @@
 package com.lambdaschool.todos.services;
 
-import ch.qos.logback.core.boolex.EvaluationException;
+
 import com.lambdaschool.todos.models.Todos;
 import com.lambdaschool.todos.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

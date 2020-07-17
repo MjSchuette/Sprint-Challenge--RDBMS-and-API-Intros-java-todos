@@ -21,7 +21,7 @@ public class Todos extends Auditable {
     //many to one with user
     @ManyToOne
     @JoinColumn(name = "userid")
-    @JsonIgnoreProperties("todos")
+    @JsonIgnoreProperties(value = "todos", allowSetters = true)
     private User user;
 
     public Todos() {
@@ -64,4 +64,5 @@ public class Todos extends Auditable {
     public void setUser(User user) {
         this.user = user;
     }
+
 }
